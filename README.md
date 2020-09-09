@@ -1,6 +1,10 @@
 # Iterative Bandwidth-Aware Learning
 
-This PyTorch-based pipeline simulates the original training of a machine learning model (with Darknet/YOLOv3 as the built-in architecture), followed by several batch iterations of continued learning on a sample set of images. The goal of this pipeline is to experimentally determine the most effective methods to sample images on the edge for retraining machine learning models, given limited bandwidth. It is currently configured to simulate this process, without actually deploying code on edge devices, though its components can be easily modified for production.
+This PyTorch-based pipeline trains an original Darknet/YOLOv3 model, followed by several batch iterations of continued learning on a sample set of images. Its goal is to experimentally determine the most effective methods of sampling data on the edge for retraining machine learning models, given limited bandwidth. It is currently configured to simulate this process, without actually deploying code on edge devices, though its components can be easily modified for a node-server production system.
+
+This project was built in Summer 2020 for [Argonne National Laboratory's](https://www.anl.gov/) [Sage project](https://sagecontinuum.org/).
+
+## Usage
 
 To run the main module for sampling and retraining (and optionally training an initial model), execute the following:
 
@@ -222,6 +226,6 @@ Reloading from a baseline model is currently not supported, as data and models w
 
 ## Further Information
 
-For more scientific background on this learning pipeline and how its various aspects were conceived, check out [this article on the Sage website](https://sagecontinuum.org/science/bandwidth-aware-learning/).
+For more scientific background on this learning pipeline, how its various aspects were conceived, and the results of the study, check out [this article on the Sage website](https://sagecontinuum.org/science/bandwidth-aware-learning/).
 
 Feel free to also contact me at spencerng [at] uchicago [dot] edu with any questions or comments!
